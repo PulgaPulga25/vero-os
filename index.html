@@ -1,0 +1,30 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>VERO OS</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="shell"><header><div><div class="eyebrow">✦ VERO INTELLIGENCE AGENCY ✦</div><h1>VERO <span>OS</span></h1><p class="online">● AGENT ONLINE</p></div><div class="seal">V<br><small>AGENT</small></div></header>
+<section class="profile"><div><small>IDENTITY VERIFIED</small><h2>AGENT V</h2><p id="rank"></p></div><div class="xp"><b id="level"></b><div class="bar"><i id="xpbar"></i></div><small id="xptext"></small></div></section>
+<div id="achievement" class="achievement hidden"></div>
+<main>
+<button class="tile primary" onclick="panel('doom')"><em>01</em><div class="anim phoneAnim"><div class="phone"><i></i><span></span></div><div class="lock"><u></u></div></div><strong>ANTI-DOOMSCROLL</strong><small>FOCUS PROTOCOL</small></button>
+<button class="tile" onclick="panel('progress')"><em>02</em><div class="anim progressAnim"><div class="meter"><i></i></div><div class="spark s1"></div><div class="spark s2"></div><div class="spark s3"></div></div><strong>MI PROGRESO</strong><small>FIELD LOG</small></button>
+<button class="tile" onclick="panel('bored')"><em>03</em><div class="anim cardsAnim"><div class="mcard c1">V</div><div class="mcard c2">?</div><div class="mcard c3">✦</div></div><strong>ESTOY ABURRIDA</strong><small>RANDOM OPS</small></button>
+<button class="tile" onclick="panel('library')"><em>04</em><div class="anim booksAnim"><div class="bk b1"></div><div class="bk b2"></div><div class="bk b3"></div><div class="page">V</div></div><strong>BIBLIOTECA</strong><small>ARCHIVES</small></button>
+<button class="tile locked" id="vault" onclick="panel('vault')"><em>05</em><div class="anim folderAnim"><div class="folder"><i></i><span>CLASSIFIED</span></div></div><strong>CLASSIFIED</strong><small>LEVEL 5 REQUIRED</small></button>
+<button class="tile locked" id="secret" onclick="panel('secret')"><em>06</em><div class="anim envelopeAnim"><div class="env"><i></i><span>V</span></div><div class="pulse"></div></div><strong>TOP SECRET</strong><small>????????</small></button>
+</main><section class="stats"><span>🎯 <b id="mc"></b><small>MISIONES</small></span><span>📵 <b id="dc"></b><small>FOCUS</small></span><span>📚 <b id="bc"></b><small>LIBROS</small></span><span>🏆 <b id="ac"></b><small>LOGROS</small></span></section>
+<div id="audioGate" class="audioGate">
+  <div class="audioGateCard">
+    <div class="audioScan"></div>
+    <small>VERO OS // AUDIO SECURITY</small>
+    <strong>INITIALIZE AUDIO SYSTEM</strong>
+    <p>Chrome necesita una interacción para activar el canal de audio.</p>
+    <button id="audioInitBtn" type="button">ACTIVATE SOUND</button>
+    <span id="audioTestStatus">CHANNEL: STANDBY</span>
+  </div>
+</div>
+<section class="soundConsole">
+<div><strong>SOUND SYSTEM</strong><small id="soundState">ARMED</small></div>
+<button id="soundToggle" onclick="toggleSound()">SFX ON</button>
+<label>VOL <input id="volume" type="range" min="0" max="100" value="45" oninput="setVolume(this.value)"></label>
+</section>
+<footer>PERSONAL DEVICE • NFC ACCESS • AUDIO SYSTEM ARMED ♡</footer></div>
+<div id="overlay" class="overlay hidden"><section class="panel"><button class="x" onclick="closeP()">×</button><div id="content"></div></section></div>
+<script src="missions.js"></script><script src="sound.js"></script><script src="app.js"></script></body></html>
