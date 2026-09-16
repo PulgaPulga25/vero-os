@@ -1,0 +1,2 @@
+# vero-os
+personal system
